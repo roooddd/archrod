@@ -1,0 +1,197 @@
+@import "colors.rasi"
+@import "fonts.rasi"
+
+configuration {
+    modi: "dmenu";
+    show-icons: true;
+}
+
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       1500px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      2px solid;
+    border-radius:               15px;
+    border-color:                @secondary;
+    cursor:                      "default";
+    background-color:            @surface;
+}
+
+mainbox {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     20px;
+    background-color:            transparent;
+    children:                    [ "inputbar", "message", "listview"];
+} 
+
+inputbar {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     10px;
+    border:                      0px 0px 2px 0px;
+    border-radius:               10px;
+    border-color:                @secondary;
+    background-color:            @surface-container;
+    text-color:                  @on-surface;
+    children:                    [ "textbox-prompt-colon", "entry" ];
+}
+
+prompt {
+    enabled:                     true;
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+
+textbox-prompt-colon {
+    enabled:                     true;
+    padding:                     0px;
+    expand:                      false;
+    str:                         " ";
+    background-color:            inherit;
+    text-color:                  inherit;
+}
+
+entry {
+    enabled:                     true;
+    padding:                     0px;
+    background-color:            inherit;
+    text-color:                  inherit;
+    cursor:                      text;
+    placeholder:                 " search...";
+    placeholder-color:           inherit;
+    placeholder-color:           @surface-bright;
+}
+
+listview {
+    enabled:                     true;
+    columns:                     5;    // ------------------------------------
+    lines:                       1;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    spacing:                     10px;
+    background-color:            transparent;
+    text-color:                  @on-surface;
+    cursor:                      "default";
+    border:                      0;
+}
+
+scrollbar {
+    handle-width:                5px ;
+    handle-color:                @primary;
+    border-radius:               10px;
+    background-color:            @surface-container;
+}
+
+element {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     0px 10px;
+    border-radius:               10px;
+    background-color:            transparent;
+    text-color:                  @on-surface;
+    cursor:                      pointer;
+    orientation:                 vertical;
+}
+
+element normal.normal, element alternate.normal {
+    background-color:            @surface;
+    text-color:                  @on-surface;
+}
+
+element normal.urgent, element alternate.urgent {
+    background-color:            @error-container;
+    text-color:                  @on-error-container;
+    border:                      0px 0px 2px 0px;
+    border-radius:               10px;
+    border-color:                @error;
+}
+
+element normal.active, element alternate.active, element selected.urgent {
+    background-color:            @secondary-container;
+    text-color:                  @on-secondary-container;
+    border:                      0px 0px 2px 0px;
+    border-color:                @secondary;
+}
+
+element selected.normal, element selected.active {
+    background-color:            @primary-container;
+    text-color:                  @on-primary-container;
+    border:                      0px 0px 2px 0px;
+    border-radius:               10px;
+    border-color:                @primary;
+}
+
+element-icon {
+    background-color:            transparent;
+    text-color:                  inherit;
+    size:                        300px;
+    cursor:                      inherit;
+}
+
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    highlight:                   inherit;
+    cursor:                      inherit;
+    vertical-align:              0.0;
+    horizontal-align:            0.5;
+}
+
+button {
+    padding:                     10px;
+    border-radius:               10px;
+    background-color:            @surface-container;
+    text-color:                  inherit;
+    cursor:                      pointer;
+}
+
+button selected {
+    background-color:            @secondary-container;
+    text-color:                  @on-secondary-container;
+    border:                      0px 0px 2px 0px;
+    border-radius:               10px;
+    border-color:                @secondary;
+}
+
+message {
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     10px;
+    border-radius:               0px;
+    background-color:            @surface-container;
+    text-color:                  @on-surface;
+}
+
+textbox {
+    background-color:            transparent;
+    text-color:                  @on-surface;
+    vertical-align:              0.5;
+    horizontal-align:            0.0;
+    highlight:                   none;
+    placeholder-color:           @surface-bright;
+    blink:                       true;
+    markup:                      true;
+}
+
+error-message {
+    padding:                     30px;
+    background-color:            @secondary-container;
+    text-color:                  @on-surface;
+}
+

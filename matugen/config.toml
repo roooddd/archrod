@@ -1,0 +1,75 @@
+[config]
+
+[config.wallpaper]
+command = "swww"
+arguments = ["img", "--transition-type", "grow", "--transition-duration", "0.8"]
+set = true
+
+[templates.waybar]
+input_path = "/home/rodrigo/.config/matugen/templates/colors.css"
+output_path = "/home/rodrigo/.config/waybar/colors.css"
+post_hook = 'killall -SIGUSR2 waybar'
+
+[templates.kitty]
+input_path = '/home/rodrigo/.config/matugen/templates/kitty-colors.conf'
+output_path = '/home/rodrigo/.config/kitty/colors.conf'
+post_hook = 'pkill -SIGUSR1 kitty'
+
+[templates.yazi]
+input_path = '/home/rodrigo/.config/matugen/templates/yazi-theme.toml'
+output_path = '/home/rodrigo/.config/yazi/theme.toml'
+
+[templates.btop]
+input_path = '/home/rodrigo/.config/matugen/templates/btop.theme'
+output_path = '/home/rodrigo/.config/btop/themes/matugen.theme'
+post_hook = 'pkill -USR2 btop'
+
+[templates.wlogout]
+input_path = '/home/rodrigo/.config/matugen/templates/colors.css'
+output_path = '/home/rodrigo/.config/wlogout/colors.css'
+
+[templates.cava]
+input_path = '/home/rodrigo/.config/matugen/templates/cava-colors.ini'
+output_path = '/home/rodrigo/.config/cava/themes/matugen-theme'
+post_hook = "pkill -USR1 cava"
+
+[templates.zathura]
+input_path = '/home/rodrigo/.config/matugen/templates/zathura-colors'
+output_path = '/home/rodrigo/.config/zathura/zathurarc'
+
+[templates.mako]
+input_path = '/home/rodrigo/.config/matugen/templates/mako'
+output_path = '/home/rodrigo/.config/mako/mako-colors'
+post_hook = 'makoctl reload'
+
+[templates.hyprland]
+input_path = '/home/rodrigo/.config/matugen/templates/hyprland-colors.conf'
+output_path = '/home/rodrigo/.config/hypr/colors.conf'
+post_hook = 'hyprctl reload'
+
+[templates.gtk3]
+input_path = '/home/rodrigo/.config/matugen/templates/gtk-colors.css'
+output_path = '/home/rodrigo/.themes/adw-gtk3-dark/gtk-3.0/colors.css'
+post_hook = 'gsettings set org.gnome.desktop.interface gtk-theme ""; gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-{{mode}}'
+
+[templates.gtk4]
+input_path = '/home/rodrigo/.config/matugen/templates/gtk-colors.css'
+output_path = '/home/rodrigo/.themes/adw-gtk3-dark/gtk-4.0/colors.css'
+
+[templates.rofi]
+input_path = '/home/rodrigo/.config/matugen/templates/rofi-colors.rasi'
+output_path = '/home/rodrigo/.config/rofi/colors.rasi'
+
+[templates.qt5ct]
+input_path = '/home/rodrigo/.config/matugen/templates/qtct-colors.conf'
+output_path = '/home/rodrigo/.config/qt5ct/colors/matugen.conf'
+post_hook = 'touch ~/.config/qt5ct/qt5ct.conf'
+
+[templates.qt6ct]
+input_path = '/home/rodrigo/.config/matugen/templates/qtct-colors.conf'
+output_path = '/home/rodrigo/.config/qt6ct/colors/matugen.conf'
+post_hook = 'touch ~/.config/qt6ct/qt6ct.conf'
+
+[templates.vesktop]
+input_path = '/home/rodrigo/.config/matugen/templates/midnight-discord.css'
+output_path = '/home/rodrigo/.config/Vencord/themes/midnight-discord.css'
