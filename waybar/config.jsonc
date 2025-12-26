@@ -52,6 +52,7 @@
         "group/hardware",
         "pulseaudio",
         "battery",
+        "bluetooth",
         "network",
         "group/system-drawer"
     ],
