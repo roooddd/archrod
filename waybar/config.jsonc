@@ -135,11 +135,11 @@
         //"exec": "nm-applet",
         "format-wifi": "{icon}",
         "format-ethernet": "",
-        "format-disconnected": "󰤮",
+        "format-disconnected": "󰤮 ",
         "on-click": "/home/rodrigo/.config/hypr/scripts/network_popup.sh",
         "on-click-right": "nm-connection-editor",
         "on-click-middle": "/home/rodrigo/.config/scripts/airplane-mode.sh",
-        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+        "format-icons": ["󰤯 ", "󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "],
         "tooltip": false
     },
 
