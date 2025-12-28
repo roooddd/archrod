@@ -1,0 +1,98 @@
+@import "colors.rasi"
+@import "fonts.rasi"
+
+configuration {
+	modi: "dmenu";
+    show-icons: false;
+}
+
+window {
+    transparency:                "real";
+    location:                    center;
+    anchor:                      center;
+    fullscreen:                  false;
+    width:                       250px;
+    x-offset:                    0px;
+    y-offset:                    0px;
+    enabled:                     true;
+    margin:                      0px;
+    padding:                     0px;
+    border:                      2px solid;
+    border-radius:               15px;
+    border-color:                @secondary;
+    cursor:                      "default";
+    background-color:            @surface;
+}
+
+mainbox {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     20px;
+    background-color:            transparent;
+    children:                    [ "listview" ];
+} 
+
+listview {
+    enabled:                     true;
+    columns:                     1;
+    lines:                       2;
+    cycle:                       true;
+    dynamic:                     true;
+    scrollbar:                   false;
+    layout:                      vertical;
+    reverse:                     false;
+    fixed-height:                true;
+    fixed-columns:               true;
+    spacing:                     5px;
+    background-color:            transparent;
+    text-color:                  @on-surface;
+    cursor:                      "default";
+    border:                      0;
+}
+
+element {
+    enabled:                     true;
+    spacing:                     10px;
+    margin:                      0px;
+    padding:                     6px;
+    border-radius:               10px;
+    background-color:            transparent;
+    text-color:                  @on-surface;
+    cursor:                      pointer;  
+}
+
+element normal.normal, element alternate.normal {
+    background-color:            @surface;
+    text-color:                  @on-surface;
+}
+
+element normal.urgent, element alternate.urgent {
+    background-color:            @error-container;
+    text-color:                  @on-error-container;
+    border:                      0px 0px 2px 0px;
+    border-radius:               10px;
+    border-color:                @error;
+}
+
+element normal.active, element alternate.active, element selected.urgent {
+    background-color:            @surface;
+    text-color:                  @on-surface;
+}
+
+element selected.normal, element selected.active {
+    background-color:            @primary-container;
+    text-color:                  @on-primary-container;
+    border:                      0px 0px 2px 0px;
+    border-radius:               10px;
+    border-color:                @primary;
+}
+
+element-text {
+    background-color:            transparent;
+    text-color:                  inherit;
+    highlight:                   inherit;
+    cursor:                      inherit;
+    vertical-align:              0.5;
+    horizontal-align:            0.5;
+}
