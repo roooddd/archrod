@@ -36,7 +36,7 @@ mkdir -p "$THEMES"
 
 # pastas e arquivos do .config
 if [ -d "$DOTFILES/.config" ]; then
-    rsync -a --delete "$DOTFILES/.config/" "$CONFIG/"
+    rsync -a "$DOTFILES/.config/" "$CONFIG/"
     log ".config (certo)"
 else
     warn "Pasta .config nao encontrada no repositorio"
@@ -52,7 +52,7 @@ fi
 
 # tema adw-gtk3-dark
 if [ -d "$DOTFILES/.themes/adw-gtk3-dark" ]; then
-    rsync -a --delete "$DOTFILES/.themes/adw-gtk3-dark" "$THEMES/"
+    rsync -a "$DOTFILES/.themes/adw-gtk3-dark" "$THEMES/"
     log ".themes/adw-gtk3-dark (certo)"
 else
     warn ".themes/adw-gtk3-dark nao encontrado no repositorio"
