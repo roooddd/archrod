@@ -34,6 +34,11 @@ log "Distribuindo arquivos..."
 mkdir -p "$CONFIG"
 mkdir -p "$THEMES"
 
+# detecta monitor e atualiza hyprland.conf
+MONITOR=$(hyprctl monitors | awk '/^Monitor/{print $2; exit}')
+sed -i "s/^monitor = [^,]*/monitor = $MONITOR/" ~/.config/hypr/hyprland.conf
+echo "Monitor detectado: $MONITOR"
+
 # pastas e arquivos do .config
 if [ -d "$DOTFILES/.config" ]; then
     rsync -a "$DOTFILES/.config/" "$CONFIG/"
