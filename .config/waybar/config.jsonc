@@ -90,11 +90,9 @@
     
     "clock": {
         // 24 hour
-        "format": " {:%H : %M} ",
-        "format-alt": "{:%d-%m-%Y}",
+        "format": " {:%d-%m-%Y | %H : %M}",
         "interval": 1,
-        "tooltip": false,
-        "on-click-right": "eww open --toggle calendar"
+        "tooltip": false
     },
     
     // icons

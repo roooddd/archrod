@@ -76,3 +76,7 @@ output_path = '~/.config/Vencord/themes/midnight-discord.css'
 [templates.prismlauncher]
 input_path = '~/.config/matugen/templates/prismlauncher.json'
 output_path = '~/.local/share/PrismLauncher/themes/Matugen/theme.json'
+
+[templates.heroic]
+input_path = '~/.config/matugen/templates/heroic.css'
+output_path = '~/.config/heroic/themes/matugen.css'
