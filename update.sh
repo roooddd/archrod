@@ -34,11 +34,6 @@ log "Distribuindo arquivos..."
 mkdir -p "$CONFIG"
 mkdir -p "$THEMES"
 
-# detecta monitor e atualiza hyprland.conf
-MONITOR=$(hyprctl monitors | awk '/^Monitor/{print $2; exit}')
-sed -i "s/^monitor = [^,]*/monitor = $MONITOR/" ~/.config/hypr/hyprland.conf
-echo "Monitor detectado: $MONITOR"
-
 # pastas e arquivos do .config
 if [ -d "$DOTFILES/.config" ]; then
     rsync -a "$DOTFILES/.config/" "$CONFIG/"
@@ -46,6 +41,11 @@ if [ -d "$DOTFILES/.config" ]; then
 else
     warn "Pasta .config nao encontrada no repositorio"
 fi
+
+# detecta monitor e atualiza hyprland.conf DEPOIS do rsync
+MONITOR=$(hyprctl monitors | awk '/^Monitor/{print $2; exit}')
+sed -i "s/^monitor = [^,]*/monitor = $MONITOR/" ~/.config/hypr/hyprland.conf
+log "Monitor detectado: $MONITOR"
 
 # .zshrc
 if [ -f "$DOTFILES/.zshrc" ]; then
