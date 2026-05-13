@@ -47,6 +47,15 @@ MONITOR=$(hyprctl monitors | awk '/^Monitor/{print $2; exit}')
 sed -i "s/^monitor = [^,]*/monitor = $MONITOR/" ~/.config/hypr/hyprland.conf
 log "Monitor detectado: $MONITOR"
 
+# aplica matugen com o wallpaper atual
+WALLPAPER=$(readlink -f "$HOME/.cache/last_wallpaper")
+if [ -f "$WALLPAPER" ]; then
+    matugen image "$WALLPAPER"
+    log "Matugen aplicado (certo)"
+else
+    warn "Wallpaper nao encontrado em ~/.cache/last_wallpaper, pulando matugen..."
+fi
+
 # .zshrc
 if [ -f "$DOTFILES/.zshrc" ]; then
     cp "$DOTFILES/.zshrc" "$HOME/.zshrc"
