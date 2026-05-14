@@ -56,6 +56,15 @@ else
     warn "Wallpaper nao encontrado em ~/.cache/last_wallpaper, pulando matugen..."
 fi
 
+# aplica matugen com o wallpaper atual
+WALLPAPER=$(readlink -f "$HOME/.cache/last_wallpaper")
+if [ -f "$WALLPAPER" ]; then
+    matugen image "$WALLPAPER" -m "dark" --source-color-index 0 
+    log "Matugen aplicado (certo)"
+else
+    warn "Wallpaper nao encontrado em ~/.cache/last_wallpaper, pulando matugen..."
+fi
+
 # .zshrc
 if [ -f "$DOTFILES/.zshrc" ]; then
     cp "$DOTFILES/.zshrc" "$HOME/.zshrc"
