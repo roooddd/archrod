@@ -135,7 +135,7 @@
         "format-wifi": "{icon}",
         "format-ethernet": "",
         "format-disconnected": "󰤮 ",
-        "on-click": "/home/rodrigo/.config/hypr/scripts/network_popup.sh",
+        "on-click": "kitty -e nmtui",
         "on-click-right": "nm-connection-editor",
         "on-click-middle": "/home/rodrigo/.config/scripts/airplane-mode.sh",
         "format-icons": ["󰤯 ", "󰤟 ", "󰤢 ", "󰤥 ", "󰤨 "],
