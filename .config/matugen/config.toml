@@ -41,11 +41,6 @@ input_path = '~/.config/matugen/templates/mako'
 output_path = '~/.config/mako/mako-colors'
 post_hook = 'makoctl reload'
 
-[templates.hyprland]
-input_path = '~/.config/matugen/templates/hyprland-colors.conf'
-output_path = '~/.config/hypr/colors.conf'
-post_hook = 'hyprctl reload'
-
 [templates.gtk3]
 input_path = '~/.config/matugen/templates/gtk-colors.css'
 output_path = '~/.config/gtk-3.0/colors.css'
@@ -81,3 +76,7 @@ output_path = '~/.local/share/PrismLauncher/themes/Matugen/theme.json'
 [templates.heroic]
 input_path = '~/.config/matugen/templates/heroic.css'
 output_path = '~/.config/heroic/themes/matugen.css'
+
+[templates.hyprland]
+input_path = '~/.config/matugen/templates/hyprland-colors.lua'
+output_path = '~/.config/hypr/colors.lua'

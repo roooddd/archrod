@@ -16,6 +16,7 @@ $fileManager = kitty -e yazi
 $menuApps = rofi -show drun -matching fuzzy
 $menuWindows = rofi -show window -matching fuzzy
 $menuWalpaper = /home/rodrigo/.config/hypr/scripts/rofi-wallpaper-selector.sh
+$browser = brave
 
 #################
 ### AUTOSTART ###
@@ -59,10 +60,10 @@ env = QT_QPA_PLATFORMTHEME,qt5ct
 env = QT_AUTO_SCREEN_SCALE_FACTOR,0
 
 env = XCURSOR_THEME,Bibata-Modern-Classic
-env = XCURSOR_SIZE,24
+env = XCURSOR_SIZE,20
 
 env = XHYPRCURSOR_THEME,Bibata-Modern-Classic
-env = HYPRCURSOR_SIZE,24
+env = HYPRCURSOR_SIZE,20
 
 env = XDG_DATA_DIRS,$HOME/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share
 
@@ -113,7 +114,7 @@ general {
 
 decoration {
     # border radius
-    rounding = 14
+    rounding = 10
     rounding_power = 2.0
 
     # transparency
@@ -126,6 +127,7 @@ decoration {
         enabled = true
         size = 4
         passes = 4
+        vibrancy = 0.1696
     }
 }
 
@@ -263,6 +265,9 @@ bind = $mainMod, space, exec, $terminal
 
 # file manager
 bind = $mainMod, E, exec, $fileManager
+
+# browser
+bind = $mainMod, B, exec, $browser
 
 # window management
 bind = $mainMod, G, pseudo, # dwindle
