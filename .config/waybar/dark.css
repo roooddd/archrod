@@ -1,0 +1,16 @@
+@define-color bg-bar rgba(30, 30, 46, 0.5);
+@define-color bg-islands rgba(17, 17, 27, 0.8);
+
+@define-color color-metrics #b4befe;
+@define-color color-utils #eba0ac;
+@define-color color-net #74c7ec;
+@define-color color-sys #94e2d5;
+@define-color color-info #a6e3a1;
+
+@define-color color-workspace-inactive rgba(108, 112, 134, 0.4);
+@define-color color-workspace-active #89b4fa;
+
+@define-color color-vpn-connected #a6e3a1;
+
+@define-color bg-tray-menu #1e1e2e;
+@define-color border-tray-menu #313244;
