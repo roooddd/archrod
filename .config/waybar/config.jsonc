@@ -98,14 +98,14 @@
     // icons
     // cpu usage
     "cpu": {
-        "format": " {usage}%",
+        "format": "󰍛 {usage}%",
         "tooltip": false,
         "on-click": "kitty -e btop"
     },
 
     // ram usage
     "memory": {
-        "format": " {}%",
+        "format": "󰘚 {}%",
         "tooltip": false,
         "on-click": "kitty -e btop"
     },
@@ -121,19 +121,19 @@
 
     // volume
     "pulseaudio": {
-      "format": " {volume}%",
-      "format-muted": "Muted",
-      "on-click": "pavucontrol",
-      "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-      "tooltip": false
+        "format": "{icon} {volume}%",
+        "format-muted": "󰝟 Muted",
+        "format-icons": ["󰕿", "󰖀", "󰕾"],
+        "on-click": "pavucontrol",
+        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "tooltip": false
     },
 
-    // internet
+    // network
     "network": {
-        //"exec": "nm-applet",
         "format-wifi": "{icon}",
-        "format-ethernet": "",
-        "format-disconnected": "󰤮 ",
+        "format-disconnected": "󰖪",
+        "format-ethernet": "󰈀",
         "on-click": "kitty -e nmtui",
         "on-click-right": "nm-connection-editor",
         "on-click-middle": "/home/rodrigo/.config/scripts/airplane-mode.sh",
@@ -149,10 +149,10 @@
 
     //  power menu
     "custom/power": {
-        "format": "",
+        "format": "󰣇",
         "on-click": "wlogout",
         "tooltip": false,
-        "exec": "echo ''",
+        "exec": "echo '󰣇'",
         "class": "power-button"
     },
 
@@ -170,9 +170,9 @@
     },
 
     "battery": {
-        "format": "{icon} {capacity}%",
-        "format-icons": ["", "", "", "", ""],
-        "tooltip": true
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": "󰚥 {capacity}%",
+    "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
     },
 
     "bluetooth": {
