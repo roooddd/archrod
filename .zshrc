@@ -105,6 +105,7 @@ alias clock='tty-clock -c'
 alias bonsai='cbonsai -i -l'
 alias pipes='pipes.sh'
 alias aquarium='asciiquarium'
+alias lava='lavat'
 
 alias sync-dots="~/update-github/sync.sh"
 alias update-dots="~/update-github/update.sh"

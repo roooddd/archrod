@@ -102,7 +102,7 @@ window#waybar {
     margin-right: 10px;
 }
 
-#pulseaudio, #clock, #bluetooth, #network {
+#pulseaudio, #clock, #bluetooth, #network, #battery {
     margin: 0 10px;
 }
 
