@@ -223,11 +223,6 @@ hl.device({
     sensitivity = -0.5,
 })
 
-hl.device({
-    name        = "pixa3848:00-093a:3848-touchpad",
-    sensitivity = -0.1,
-})
-
 
 ---------------------
 ---- KEYBINDINGS ----

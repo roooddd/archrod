@@ -2,7 +2,7 @@
 
 [config.wallpaper]
 set = true
-command = "awww img --transition-fps 60 --transition-type grow --transition-duration 0.6 --transition-bezier 0.43,1.19,1,0.4 '{{ image }}'"
+command = "awww img --transition-fps 60 --transition-type grow --transition-duration 0.6 --transition-bezier 0.43,1.19,1,0.4 {{ image }}"
 
 [templates.waybar]
 input_path = "~/.config/matugen/templates/colors.css"

@@ -89,6 +89,7 @@ if [[ -z "$chosen_path" ]]; then
   exit 1
 fi
 
-#  APLICA
+#  APLICA 
+awww img "$chosen_path" $AWWW_PARAMS --outputs "$focused_monitor"
 matugen image "$chosen_path" -m "$MATUGEN_MODE" --source-color-index "$MATUGEN_COLOR_INDEX"
 ln -sf "$chosen_path" "$LAST_WALL"
