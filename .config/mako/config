@@ -55,6 +55,6 @@ max-visible=5
 # notification position
 anchor=top-right 
 
-timeout=3000
+default-timeout=3000
 
 
