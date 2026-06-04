@@ -17,7 +17,7 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       400px;
+    width:                       500px;
     x-offset:                    0px;
     y-offset:                    0px;
     enabled:                     true;
@@ -25,7 +25,7 @@ window {
     padding:                     0px;
     border:                      2px solid;
     border-radius:               15px;
-    border-color:                @secondary;
+    border-color:                @outline;
     cursor:                      "default";
     background-color:            @surface;
 }
@@ -36,20 +36,28 @@ mainbox {
     margin:                      0px;
     padding:                     20px;
     background-color:            transparent;
-    children:                    [ "inputbar", "message", "listview", "mode-switcher" ];
-} 
+    children:                    [ "imagebox", "inputbar", "message", "listview", "mode-switcher" ];
+}
+
+imagebox {
+    padding:                     90px 60px;
+    border-radius:               10px;
+    background-color:            @surface-container;
+    background-image:            url("~/.cache/last_wallpaper", width);
+    children:                    [];
+}
 
 inputbar {
     enabled:                     true;
     spacing:                     10px;
     margin:                      0px;
-    padding:                     10px;
+    padding:                     5px;
     border:                      0px 0px 2px 0px;
     border-radius:               10px;
     border-color:                @secondary;
     background-color:            @surface-container;
     text-color:                  @on-surface;
-    children:                    [ "textbox-prompt-colon", "entry" ];
+    children:                    [ "entry" ];
 }
 
 prompt {
@@ -58,18 +66,9 @@ prompt {
     text-color:                  inherit;
 }
 
-textbox-prompt-colon {
-    enabled:                     true;
-    padding:                     0px;
-    expand:                      false;
-    str:                         " ";
-    background-color:            inherit;
-    text-color:                  inherit;
-}
-
 entry {
     enabled:                     true;
-    padding:                     0px;
+    padding:                     5px;
     background-color:            inherit;
     text-color:                  inherit;
     cursor:                      text;
