@@ -354,7 +354,7 @@ hl.window_rule({
 
 -- floating
 hl.window_rule({ match = { class = "imv" },                        float = true })
-hl.window_rule({ match = { class = "org.pulseaudio.pavucontrol" }, float = true })
+hl.window_rule({ match = { class = "org.pulseaudio.pavucontrol" }, float = true }) --teste
 hl.window_rule({ match = { class = "lxqt-policykit-agent" },       float = true })
 hl.window_rule({ match = { class = "org.gnome.Calculator" },       float = true })
 hl.window_rule({ match = { class = "xed" },                        float = true })
