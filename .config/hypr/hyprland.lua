@@ -222,7 +222,7 @@ hl.gesture({
 
 hl.device({
     name        = "pixa3848:00-093a:3848-touchpad",
-    sensitivity = 1 -- teste
+    sensitivity = -0.1
 })
 
 
@@ -354,7 +354,7 @@ hl.window_rule({
 
 -- floating
 hl.window_rule({ match = { class = "imv" },                        float = true })
-hl.window_rule({ match = { class = "org.pulseaudio.pavucontrol" }, float = true }) --teste
+hl.window_rule({ match = { class = "org.pulseaudio.pavucontrol" }, float = true })
 hl.window_rule({ match = { class = "lxqt-policykit-agent" },       float = true })
 hl.window_rule({ match = { class = "org.gnome.Calculator" },       float = true })
 hl.window_rule({ match = { class = "xed" },                        float = true })
