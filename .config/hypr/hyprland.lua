@@ -219,8 +219,8 @@ hl.gesture({
 })
 
 hl.device({
-    name        = "epic-mouse-v1",
-    sensitivity = -0.5,
+    name        = "pixa3848:00-093a:3848-touchpad",
+    sensitivity = -0.1,
 })
 
 
