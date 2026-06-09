@@ -38,6 +38,8 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("awww-daemon")
     hl.exec_cmd("waybar")
     hl.exec_cmd("mako -c ~/.config/mako/config")
+    hl.exec_cmd("wl-paste --type text --watch cliphist store")
+    hl.exec_cmd("wl-paste --type image --watch cliphist store")
 end)
 
 
@@ -219,8 +221,8 @@ hl.gesture({
 })
 
 hl.device({
-    name        = "epic-mouse-v1",
-    sensitivity = -0.5,
+    name        = "pixa3848:00-093a:3848-touchpad",
+    sensitivity = -0.1,
 })
 
 
@@ -261,6 +263,7 @@ hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd("~/.config/hypr/scripts/scree
 hl.bind(mainMod .. " + R",   hl.dsp.exec_cmd(menuApps))
 hl.bind(mainMod .. " + W",   hl.dsp.exec_cmd(menuWallpp))
 hl.bind(mainMod .. " + tab", hl.dsp.exec_cmd(menuWindows))
+hl.bind(mainMod .. " + C",   hl.dsp.exec_cmd("cliphist list | rofi -dmenu | cliphist decode | wl-copy"))
 
 -- move focus
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))

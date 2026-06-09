@@ -48,6 +48,10 @@ window#waybar {
     background: @background;
 }
 
+#workspaces button.urgent {
+    color: @error;
+}
+
 #custom-power:hover {
     color: @tertiary_fixed;
 }
