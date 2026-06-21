@@ -101,7 +101,7 @@ hl.config({
     },
 
     decoration = {
-        rounding           = 10,
+        rounding           = 5,
         rounding_power     = 2.0,
         active_opacity     = 0.95,
         inactive_opacity   = 0.85,
@@ -140,8 +140,8 @@ hl.curve("wndw",           { type = "bezier", points = { { 0.05, 0.9 },  { 0.1, 
 -- animations
 hl.animation({ leaf = "global",           enabled = true,  speed = 10,  bezier = "default" })
 hl.animation({ leaf = "windows",          enabled = true,  speed = 5,   bezier = "easeOutQuint" })
-hl.animation({ leaf = "windowsIn",        enabled = true,  speed = 2.5, bezier = "wndw",         style = "popin" })
-hl.animation({ leaf = "windowsOut",       enabled = true,  speed = 1.5, bezier = "linear",       style = "popin" })
+hl.animation({ leaf = "windowsIn",        enabled = true,  speed = 2.5, bezier = "wndw",         style = "slide" })
+hl.animation({ leaf = "windowsOut",       enabled = true,  speed = 1.5, bezier = "linear",       style = "slide" })
 hl.animation({ leaf = "layers",           enabled = true,  speed = 3.8, bezier = "easeOutQuint", style = "slide" })
 hl.animation({ leaf = "layersIn",         enabled = true,  speed = 4,   bezier = "easeOutQuint", style = "slide" })
 hl.animation({ leaf = "layersOut",        enabled = true,  speed = 1.5, bezier = "quick",        style = "slide" })
@@ -164,6 +164,17 @@ hl.workspace_rule({ workspace = "special:extra", gaps_out = 30 })
 hl.config({
     dwindle = {
         preserve_split = true,
+        force_split                  = 0,
+        preserve_split               = false,
+        smart_split                  = false,
+        smart_resizing               = true,
+        permanent_direction_override = false,
+        special_scale_factor         = 1,
+        split_width_multiplier       = 1.0,
+        use_active_for_splits        = true,
+        default_split_ratio          = 1.0,
+        split_bias                   = 0,
+        precise_mouse_move           = false,
     },
     master = {
         new_status = "master",
@@ -309,7 +320,6 @@ hl.bind("XF86AudioNext",  hl.dsp.exec_cmd("playerctl next"),       { locked = tr
 hl.bind("XF86AudioPause", hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind("XF86AudioPrev",  hl.dsp.exec_cmd("playerctl previous"),   { locked = true })
-
 
 --------------------------------
 ---- WINDOWS AND WORKSPACES ----
