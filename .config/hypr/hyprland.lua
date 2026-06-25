@@ -369,7 +369,7 @@ hl.window_rule({ match = { class = "lxqt-policykit-agent" },       float = true 
 hl.window_rule({ match = { class = "org.gnome.Calculator" },       float = true })
 hl.window_rule({ match = { class = "xed" },                        float = true })
 hl.window_rule({ match = { class = "org.pwmt.zathura" },           float = true })
-hl.window_rule({ match = { class = "Blueman-manager" },            float = true })
+hl.window_rule({ match = { class = "blueman-manager" },            float = true })
 
 -- fullscreen e jogos em workspace vazia
 hl.window_rule({ match = { fullscreen = true },         workspace = "empty" })
