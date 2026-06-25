@@ -86,8 +86,10 @@ fi
 
 # detecta monitor e atualiza hyprland.lua DEPOIS do rsync
 MONITOR=$(hyprctl monitors | awk '/^Monitor/{print $2; exit}')
+RATE=$(hyprctl monitors -j | python3 -c "import json,sys; m=json.load(sys.stdin)[0]; print(int(m['refreshRate']))")
 sed -i "s/output\s*=\s*\"[^\"]*\"/output   = \"$MONITOR\"/" ~/.config/hypr/hyprland.lua
-log "Monitor detectado: $MONITOR"
+sed -i "s/mode\s*=\s*\"[^x]*x[^@]*@[^\"]*\"/mode     = \"1920x1080@$RATE\"/" ~/.config/hypr/hyprland.lua
+log "Monitor detectado: $MONITOR @ ${RATE}Hz"
 
 # aplica matugen com o wallpaper atual
 WALLPAPER=$(readlink -f "$HOME/.cache/last_wallpaper")
