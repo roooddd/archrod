@@ -26,9 +26,6 @@ local browser     = "brave"
 ---- AUTOSTART ----
 -------------------
 hl.on("hyprland.start", function()
-    hl.exec_cmd("/usr/lib/xdg-desktop-portal")
-    hl.exec_cmd("/usr/lib/xdg-desktop-portal-gtk")
-    hl.exec_cmd("/usr/lib/xdg-desktop-portal-hyprland")
     hl.exec_cmd("/usr/lib/gvfsd")
     hl.exec_cmd("/usr/lib/gvfsd-fuse")
     hl.exec_cmd("playerctld daemon")
@@ -83,14 +80,14 @@ hl.permission("/usr/(lib|libexec|lib64)/xdg-desktop-portal-hyprland", "screencop
 -----------------------
 hl.config({
     general = {
-        gaps_in           = 6,
-        gaps_out          = 10,
+        gaps_in           = 4,
+        gaps_out          = 12,
         gaps_workspaces   = 5,
         float_gaps        = 0,
-        border_size       = 2,
+        border_size       = 1,
         col = {
-            active_border          = { colors = { colors.outline_variant, colors.outline }, angle = 90 },
-            inactive_border        = { colors = { colors.surface_dim, colors.surface }, angle = 90 },
+            active_border          = { colors = { colors.outline, colors.inverse_surface }, angle = 90 },
+            inactive_border        = { colors = { colors.surface, colors.outline_variant }, angle = 90 },
         --    nogroup_border_active  = colors.on_primary_fixed_variant,
         --    nogroup_border         = colors.surface_dim,
         },
@@ -117,8 +114,8 @@ hl.config({
         blur = {
             enabled  = true,
             size     = 4,
-            passes   = 4,
-            vibrancy = 0.1696,
+            passes   = 2,
+            vibrancy = 0.17,
         },
     },
 
