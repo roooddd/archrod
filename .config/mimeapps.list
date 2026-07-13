@@ -30,3 +30,4 @@ text/x-c=code.desktop
 text/x-c++=code.desktop
 text/x-python=code.desktop
 x-scheme-handler/hydralauncher=hydralauncher.desktop
+x-scheme-handler/notion=notion.desktop

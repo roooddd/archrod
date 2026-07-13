@@ -16,22 +16,22 @@ theme[main_bg]=""
 theme[main_fg]="#dfe3e7"
 
 # Title color for boxes
-theme[title]="#8dcff2"
+theme[title]="#8ecff2"
 
 # Highlight color for keyboard shortcuts
 theme[hi_fg]="#b5c9d7"
 
 # Background color of selected item in processes box
-theme[selected_bg]="#8dcff2"
+theme[selected_bg]="#8ecff2"
 
 # Foreground color of selected item in processes box
-theme[selected_fg]="#003548"
+theme[selected_fg]="#003549"
 
 # Color of inactive/disabled text
 theme[inactive_fg]="#c0c7cd"
 
 # Misc colors for processes box including mini cpu graphs, details memory graph and details status text
-theme[proc_misc]="#c8c2ea"
+theme[proc_misc]="#c9c1ea"
 
 # Cpu box outline color
 theme[cpu_box]="#8a9297"
@@ -46,16 +46,16 @@ theme[net_box]="#8a9297"
 theme[proc_box]="#8a9297"
 
 # Box divider line and small boxes line color
-theme[div_line]="#40484c"
+theme[div_line]="#40484d"
 
 # Temperature graph colors
 theme[temp_start]="#b5c9d7"
-theme[temp_mid]="#8dcff2"
+theme[temp_mid]="#8ecff2"
 theme[temp_end]="#ffb4ab"
 
 # CPU graph colors
 theme[cpu_start]="#b5c9d7"
-theme[cpu_mid]="#8dcff2"
+theme[cpu_mid]="#8ecff2"
 theme[cpu_end]="#ffb4ab"
 
 # Mem/Disk free meter
@@ -64,14 +64,14 @@ theme[free_mid]=""
 theme[free_end]="#364954"
 
 # Mem/Disk cached meter
-theme[cached_start]="#c8c2ea"
+theme[cached_start]="#c9c1ea"
 theme[cached_mid]=""
-theme[cached_end]="#474364"
+theme[cached_end]="#484264"
 
 # Mem/Disk available meter
-theme[available_start]="#8dcff2"
+theme[available_start]="#8ecff2"
 theme[available_mid]=""
-theme[available_end]="#004d67"
+theme[available_end]="#004d68"
 
 # Mem/Disk used meter
 theme[used_start]="#ffb4ab"
@@ -80,10 +80,10 @@ theme[used_end]="#93000a"
 
 # Download graph colors
 theme[download_start]="#b5c9d7"
-theme[download_mid]="#8dcff2"
-theme[download_end]="#c8c2ea"
+theme[download_mid]="#8ecff2"
+theme[download_end]="#c9c1ea"
 
 # Upload graph colors
 theme[upload_start]="#b5c9d7"
-theme[upload_mid]="#8dcff2"
-theme[upload_end]="#c8c2ea"
+theme[upload_mid]="#8ecff2"
+theme[upload_end]="#c9c1ea"
