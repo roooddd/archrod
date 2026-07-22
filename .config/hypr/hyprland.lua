@@ -241,6 +241,7 @@ local mainMod = "SUPER"
 
 -- terminal
 hl.bind(mainMod .. " + space", hl.dsp.exec_cmd(terminal))
+hl.bind(mainMod .. " + ALT + space", hl.dsp.exec_cmd("kitty --class kitty-float"))
 
 -- browser
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd(browser))
@@ -357,6 +358,13 @@ hl.window_rule({
     match   = { fullscreen = true },
     opacity = "1.0 override 1.0 override 1.0 override",
     no_blur = true,
+})
+
+-- kitty on float bind
+hl.window_rule({
+  name = "float-terminal",
+  match = { class = "kitty-float" },
+  float = true,
 })
 
 -- floating
