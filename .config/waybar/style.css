@@ -65,15 +65,15 @@ window#waybar {
 }
 
 #hardware:hover {
-    color: @secondary-fixed;
+    color: @secondary_fixed;
 }
 
 #pulseaudio:hover, #bluetooth:hover, #battery:hover, #network:hover {
-    color: @primary-fixed;
+    color: @primary_fixed;
 }
 
 #custom-tray-toggle:hover {
-    color: @tertiary-fixed;
+    color: @tertiary_fixed;
 }
 
 #cpu, #temperature, #memory, #custom-tray-toggle, 
