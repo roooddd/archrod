@@ -86,8 +86,8 @@ hl.config({
         float_gaps        = 0,
         border_size       = 1,
         col = {
-            active_border          = { colors = { colors.outline, colors.inverse_surface }, angle = 90 },
-            inactive_border        = { colors = { colors.surface, colors.outline_variant }, angle = 90 },
+            active_border          = { colors = { colors.primary, colors.primary_fixed }, angle = 90 },
+            inactive_border        = { colors = { colors.outline, colors.outline_variant }, angle = 90 },
         --    nogroup_border_active  = colors.on_primary_fixed_variant,
         --    nogroup_border         = colors.surface_dim,
         },
@@ -160,9 +160,8 @@ hl.workspace_rule({ workspace = "special:extra", gaps_out = 30 })
 
 hl.config({
     dwindle = {
-        preserve_split = true,
+        preserve_split               = true,
         force_split                  = 0,
-        preserve_split               = false,
         smart_split                  = false,
         smart_resizing               = true,
         permanent_direction_override = false,
