@@ -107,16 +107,34 @@ hl.config({
         shadow = {
             enabled      = true,
             range        = 4,
-            render_power = 3,
+            render_power = 4,
             color        = 0xee1a1a1a,
         },
 
         blur = {
-            enabled  = true,
-            size     = 4,
-            passes   = 2,
-            vibrancy = 0.17,
+            enabled    = true,
+
+            brightness = 0.6, -- can be changed in future light mode
+            contrast   = 1,
+            noise      = 0,
+            size       = 4,
+            passes     = 4,
+            
+            special    = false,
         },
+
+        glow = {
+            enabled = false,
+        },
+
+        motion_blur = {
+            enabled = false,
+            samples = 64,
+        },
+
+       
+
+
     },
 
     animations = {
