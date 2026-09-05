@@ -47,7 +47,7 @@ set search-hadjust true
 set adjust-open width
 
 " Typography
-set font "JetbrainsMono Nerd Font 12"
+set font "Inter 12"
 
 " -----------------------------------------------------------------------------
 " Zathura mappings
