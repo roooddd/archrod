@@ -13,7 +13,7 @@ title=$(echo "$title" | sed 's/&/\&amp;/g; s/</\&lt;/g; s/>/\&gt;/g')
 
 # ícone de status
 case "$status" in
-    Playing) status_icon="▶" ;;
+    Playing) status_icon="▸" ;;
     Paused)  status_icon="⏸" ;;
     Stopped|"") status_icon="⏹" ;;
     *) status_icon="⏹" ;;
@@ -21,8 +21,8 @@ esac
 
 # ícone do player
 case "$player" in
-    *spotify*) app_icon="" ;;   # ícone do Spotify (Nerd Font / Font Awesome)
-    *) app_icon="󰝚" ;;          # nota musical como default
+    *spotify*) app_icon=" " ;;   # ícone do Spotify (Nerd Font / Font Awesome)
+    *) app_icon="󰝚 " ;;          # nota musical como default
 esac
 
 # texto
