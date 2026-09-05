@@ -40,7 +40,7 @@ hl.config({
             brightness = 0.6, -- can be changed in future light mode
             contrast   = 1,
             noise      = 0,
-            size       = 4,
+            size       = 2,
             passes     = 4,
             
             special    = false,
