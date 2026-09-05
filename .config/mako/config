@@ -15,7 +15,7 @@ on-button-right=dismiss
 on-touch=dismiss
 
 # font family
-font=JetBrainsMono Nerd Font 10
+font=Inter 10
 
 # text, background and border color
 # text-color=#f8f8f2
