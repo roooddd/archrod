@@ -12,7 +12,7 @@ focused_monitor=$(hyprctl monitors | awk '/^Monitor/{name=$2} /focused: yes/{pri
 FPS=60
 TYPE="grow"
 DURATION=0.6
-BEZIER="0.77,0,0.175,1"
+BEZIER="0.7,0,0.8,0.1"
 AWWW_PARAMS="--transition-fps $FPS --transition-type $TYPE --transition-duration $DURATION --transition-bezier $BEZIER"
 
 #  MATUGEN 
