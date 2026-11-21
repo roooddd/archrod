@@ -18,6 +18,7 @@
         "on-click": "activate",
         "active-only": false,
         "all-outputs": false,
+        "tooltip": false,
         "format-icons": {
             // 1 - 10
             "1": "1",
